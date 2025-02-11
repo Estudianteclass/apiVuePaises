@@ -11,8 +11,11 @@ export const useStateStore = defineStore('informacion', {
         llenarLista(elemento) {
             this.paisesContinente = elemento;
         },
-        odenarHabitantes(){
+        odenarHabitantesAsc(){
             this.paisesContinente.sort((a,b)=>a.population-b.population);
+        },
+        odenarHabitantesDesc(){
+            this.paisesContinente.sort((a,b)=>b.population-a.population);
         }
     }
 })
