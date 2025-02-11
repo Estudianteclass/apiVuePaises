@@ -4,13 +4,15 @@ export const useStateStore = defineStore('informacion', {
 
 
     state: () => ({
-        listaElementos: [],
-        otraLista: [],
-        listaProductos: [],
+        paisesContinente: [],
+      
     }),
     actions: {
-        inicializarLista(elemento) {
-            this.listaElementos = elemento;
+        llenarLista(elemento) {
+            this.paisesContinente = elemento;
+        },
+        odenarHabitantes(){
+            this.paisesContinente.sort((a,b)=>a.population-b.population);
         }
     }
 })
